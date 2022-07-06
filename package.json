@@ -1,4 +1,14 @@
 {
+  "name": "lebayk-bot",
+  "version": "1.0.0",
+  "description": "Un bot pour le serveur lebayk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AlbaDev",
+  "license": "ISC",
+
   "dependencies": {
     "@agc93/privatebin": "^0.0.3",
     "@discordjs/voice": "^0.8.0",
