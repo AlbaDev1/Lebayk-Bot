@@ -251,9 +251,13 @@ module.exports = {
           .setColor('#2f3136')
           .setTimestamp();
     
-        client.channels.cache.get('994246859705041017').send({
-          embeds: [embed]
-        })
+        const webhookClient = new WebhookClient({ id: '995390483322896566', token: '8DuoKVHBYnrLkes3AbsvmvbflJnutw3B6NXSloPQcpTcwqyRNm6Yt1Gjh6SgsNYGdyFK' });
+          
+          webhookClient.send({
+            username: 'Logs tickets',
+            avatarURL: 'https://i.imgur.com/iyGGOIx.png',
+            embeds: [embed],
+          });
         chan.send('Supprime le salon...');
     
         setTimeout(() => {
