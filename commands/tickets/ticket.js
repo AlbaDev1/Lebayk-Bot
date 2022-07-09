@@ -1,5 +1,5 @@
 const { getPasteUrl, PrivateBinClient } = require('@agc93/privatebin');
-const { MessageEmbed, MessageActionRow, MessageSelectMenu, MessageButton , Client, Intents } = require('discord.js')
+const { MessageEmbed, MessageActionRow, MessageSelectMenu, MessageButton , WebhookClient } = require('discord.js')
 
 module.exports = {
     category: 'Configuration',
