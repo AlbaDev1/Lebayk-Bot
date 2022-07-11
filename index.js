@@ -94,4 +94,20 @@ client.distube = new DisTube(client, {
     youtubeDL: false
   })
 
+// Fonction de bienvenue
+
+client.on("guildMemberAdd", ( member ) => {
+  const welcome = "992862143441551440"
+  const general = "992867717398941756"
+  const rules = "992862190862352474"
+
+  const welcomechannel = member.guild.channels.cache.get(welcome)
+  const generalchannel = member.guild.channels.cache.get(general)
+
+  welcomechannel.send(`Bienvenue <@${member.id}> sur ${member.guild.name} ! Tu es notre ${member.guild.memberCount}ème membre !`)
+
+  member.send(`Bienvenue ! Penses a regarder le salon <#${rules}>`)
+  generalchannel.send(`Souhaitez la bienvenue à ${member.user.username} !`)
+})
+
 client.login(process.env.TOKEN)
