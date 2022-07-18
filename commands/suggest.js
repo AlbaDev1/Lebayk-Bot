@@ -7,7 +7,7 @@ module.exports = {
     slash: 'both',
 
     callback: async ({ client, message, args }) => {
-        const suggestionchannel = "980021197871910917"
+        const suggestionchannel = "992869986227994704"
         const suggestionQuery = args.join(" ")
         if(!suggestionQuery) return 'Veuillez indiquer une suggestion !'
 
