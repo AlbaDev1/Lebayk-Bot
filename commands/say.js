@@ -1,5 +1,3 @@
-const { Client, GuildMember, MessageActionRow, MessageSelectMenu, MessageSelectOptionData, Role, TextChannel } = require("discord.js");
-
 module.exports = {
     category: 'Configuration',
     description: 'Ajoute un auto role a un message auto role.',
@@ -7,30 +5,36 @@ module.exports = {
     permissions: ['ADMINISTRATOR'],
 
     minArgs: 2,
-    maxArgs: 2,
-    expectedArgs: '<channel> <message>',
+    expectedArgs: '<channel> <text>',
     expectedArgsTypes: ['CHANNEL', 'STRING'],
 
     slash: 'both',
     
     guildOnly: true,
 
-    callback: async ({ message, interaction, args, client }) => {
+    callback: async ({ message, interaction, args }) => {
 
     const channel = (
         message 
             ? message.mentions.channels.first() 
             : interaction.options.getChannel('channel')
         )
+    if(!channel | channel.type !== 'GUILD_TEXT'){
+        return 'Please tag a text channel.'
+    }
 
-    const message2 = (
-        message
-            ? args[1]
-            : interaction.options.getString('message')
-        )
+    args.shift()
+    const text = args.join(' ')
 
-        channel.send({ content: message2 })
+    channel.send(text)
 
+    if(interaction){
+        interaction.reply({
+            content: 'Message envoyé !',
+            ephemeral: true
+        })
+    }else if(message){
         return 'Message envoyé !'
+    }
     }
 }
