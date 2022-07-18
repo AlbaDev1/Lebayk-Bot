@@ -33,8 +33,6 @@ module.exports = {
             content: 'Message envoyé !',
             ephemeral: true
         })
-    }else if(message){
-        return 'Message envoyé !'
     }
     }
 }
