@@ -15,7 +15,7 @@ module.exports = {
         if(!messageID) return 'Spécifiez un identifiant de message !'
         if(!acceptQuery) return 'Spécifiez une raison !'
         try{
-            const suggestionChannel = message.guild.channels.cache.get("980021197871910917")
+            const suggestionChannel = message.guild.channels.cache.get("992869986227994704")
             const suggestedEmbed = await suggestionChannel.messages.fetch(messageID)
             const data = suggestedEmbed.embeds[0]
             const acceptEmbed = new MessageEmbed()
