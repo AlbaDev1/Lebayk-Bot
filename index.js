@@ -53,7 +53,7 @@ client.on('ready', async (client) => {
     if(title === thevideo.title) return
     if(title !== thevideo.title){
       yt.establecer("UC8avyyaUes-7YU_uVxXDjzg", thevideo.title)
-      client.channels.cache.get("997831883222175795").send(`${thevideo.author} a sorti une nouvelle vidéo : **${thevideo.title}**\nhttps://www.youtube.com/watch?v=${thevideo.videoId}`)
+      client.channels.cache.get("997831883222175795").send(`@everyone ${thevideo.author} a sorti une nouvelle vidéo : **${thevideo.title}**\nhttps://www.youtube.com/watch?v=${thevideo.videoId}`)
     }
   }, 120000)
 
@@ -92,14 +92,14 @@ client.on('ready', async (client) => {
                   title: `${r.title}`
                 })
 
-                await client.channels.cache.get("997831883222175795").send({ content: `${r.user_name} est en live ! Venez nous rejoindre ! \nhttps://twitch.tv/${r.user_name}`, embeds: [embed]})
+                await client.channels.cache.get("997831883222175795").send({ content: `@everyone ${r.user_name} est en live ! Venez nous rejoindre ! \nhttps://twitch.tv/${r.user_name}`, embeds: [embed]})
 
                 return await newdata.save()
               }
 
               if(data2.title === `${r.title}`) return
 
-              await client.channels.cache.get("997831883222175795").send({ content: `${r.user_name} est en live ! Venez nous rejoindre ! \nhttps://twitch.tv/${r.user_name}`, embeds: [embed]})
+              await client.channels.cache.get("997831883222175795").send({ content: `@everyone ${r.user_name} est en live ! Venez nous rejoindre ! \nhttps://twitch.tv/${r.user_name}`, embeds: [embed]})
               await schema.findOneAndUpdate({ user: r.user_name }, { title: r.title })
             }
         }
