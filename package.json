@@ -8,7 +8,6 @@
   },
   "author": "AlbaDev",
   "license": "ISC",
-
   "dependencies": {
     "@agc93/privatebin": "^0.0.3",
     "@discordjs/voice": "^0.8.0",
@@ -21,10 +20,14 @@
     "ffmpeg": "^0.0.4",
     "fs": "^0.0.1-security",
     "libsodium-wrappers": "^0.7.9",
+    "megadb": "^3.4.0",
     "moment": "^2.29.1",
+    "node-superfetch": "^0.2.3",
+    "node-twitch": "^0.4.5",
     "nodemailer": "^6.7.7",
     "opusscript": "^0.0.8",
     "wokcommands": "^1.5.3",
+    "yt-channel-info": "^2.2.0",
     "ytdl-core": "^4.8.3"
   }
 }
