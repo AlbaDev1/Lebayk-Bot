@@ -106,7 +106,7 @@ client.on('ready', async (client) => {
     })
 }, 120000)
 
-  mongoose.connect("mongodb+srv://albadev:lucas2012@cluster0.ed4gwtl.mongodb.net/?retryWrites=true&w=majority", {
+  mongoose.connect("tkt il y a rien ici, tu crois quoi ?", {
     useNewUrlParser: true
   }).then(() => {
     console.log("Connecté a MongoDB !")
